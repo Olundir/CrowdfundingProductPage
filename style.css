@@ -32,7 +32,7 @@ button {
 }
 body {
   font-size: 1.6rem;
-  background-image: url(../images/image-hero-mobile.jpg);
+  background-image: url("images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   line-height: 2rem;
@@ -49,7 +49,7 @@ nav {
 }
 
 #compName {
-  background-image: url(../images/logo.svg);
+  background-image: url("images/logo.svg");
   width: 128px;
   height: 20px;
   margin: 2rem;
@@ -148,7 +148,7 @@ h5 {
 }
 
 .bookmark {
-  background-image: url(../images/icon-bookmark.svg);
+  background-image: url("images/icon-bookmark.svg");
   background-position: center;
   background-color: black;
   border: none;
@@ -159,11 +159,11 @@ h5 {
   cursor: pointer;
 }
 .bookmark:hover {
-  background-image: url(../images/icon-bookmark-hover.svg);
+  background-image: url("images/icon-bookmark-hover.svg");
 }
 
 .bookmarkChecked {
-  background-image: url(../images/icon-bookmark-checked.svg);
+  background-image: url("images/icon-bookmark-checked.svg");
 }
 /* ---- Sections ---- */
 
@@ -178,7 +178,7 @@ h5 {
 #logo {
   width: 56px;
   height: 56px;
-  background-image: url(/images/logo-mastercraft.svg);
+  background-image: url("images/logo-mastercraft.svg");
   position: absolute;
   top: 24rem;
   z-index: 2;
@@ -309,7 +309,7 @@ span {
 }
 
 .close {
-  background-image: url(/images/icon-close-modal.svg);
+  background-image: url("images/icon-close-modal.svg");
   width: 15px;
   height: 15px;
 }
@@ -340,7 +340,7 @@ input {
 
 .dollarSign {
   position: relative;
-  background-image: url(/images/iconmonstr-coin-2.svg);
+  background-image: url("images/iconmonstr-coin-2.svg");
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
@@ -386,7 +386,7 @@ input {
 /* successful pledge  */
 
 .ok {
-  background-image: url(/images/icon-check.svg);
+  background-image: url("images/icon-check.svg");
   width: 64px;
   height: 64px;
 }
