@@ -15,9 +15,11 @@ hamb.addEventListener("click", () => {
 });
 
 window.onscroll = () => {
-  hamb.classList.remove("is-active");
-  menu.classList.remove("visibilityToggle");
-  greyOut.classList.remove("visibilityToggle");
+  if (hamb.classList.contains("is-active")) {
+    hamb.classList.remove("is-active");
+    menu.classList.remove("visibilityToggle");
+    greyOut.classList.remove("visibilityToggle");
+  }
 };
 
 const bookmark = document.querySelector(".bookmark");
@@ -46,7 +48,10 @@ popUp.addEventListener("click", () => {
 });
 
 const exit = document.querySelector(".close");
-exit.addEventListener("click", () => exitModal());
+exit.addEventListener("click", () => {
+  exitModal();
+  for (rad of radio) rad.checked = false;
+});
 
 function exitModal() {
   popUp.classList.remove("visibilityToggle");
@@ -71,7 +76,7 @@ for (button of backProjectButton) {
 const successPledge = document.querySelector(".successPledge");
 const continueButton = document.querySelectorAll(".continue");
 
-visualViewport.addEventListener("scroll", () => {
+document.addEventListener(`scroll`, () => {
   let vH = visualViewport.pageTop;
   let popH = popUp.style.top;
   if (vH < parseFloat(popH)) popUp.style.top = `${vH + 20}px`;
@@ -87,7 +92,7 @@ done.addEventListener("click", () => {
 
 for (let i = 0; i < pledgeCard.length - 1; i++) {
   pledgeCard[i].addEventListener("click", (e) => {
-    console.log(e);
+    console.log(e.target);
     if (e.target.innerText === "Continue") {
       exitModal();
       for (rad of radio) rad.checked = false;
