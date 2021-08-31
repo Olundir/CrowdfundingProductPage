@@ -1,0 +1,408 @@
+.popUp {
+  position: absolute;
+  top: 4rem;
+  visibility: hidden;
+  z-index: 7;
+  background-color: white;
+}
+.successPledge {
+  position: absolute;
+  visibility: hidden;
+  z-index: 7;
+  background-color: white;
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 4rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+:root {
+  font-family: "Commissioner", sans-serif;
+  font-size: 10px;
+}
+button {
+  color: white;
+  font-weight: 700;
+  font-family: "Commissioner", sans-serif;
+  margin: 0 0.5rem;
+}
+body {
+  font-size: 1.6rem;
+  background-image: url(../images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 2rem;
+}
+main {
+  margin-top: 15rem;
+}
+/* ---- Navigation Bar ---- */
+nav {
+  position: relative;
+  height: 10rem;
+  z-index: 4;
+  padding: 1rem;
+}
+
+#compName {
+  background-image: url(../images/logo.svg);
+  width: 128px;
+  height: 20px;
+  margin: 2rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  width: 90vw;
+  left: 2rem;
+  border-radius: 1rem;
+  visibility: hidden;
+}
+li {
+  font-weight: 500;
+  padding: 1.75rem;
+  cursor: pointer;
+}
+.listBreak {
+  border-top: 1px solid rgb(182, 182, 182);
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.greyOut {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(189, 189, 189, 0.3));
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+.greyOutPopOut {
+  width: 100%;
+  height: 270rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(189, 189, 189, 0.3));
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+.visibilityToggle {
+  visibility: visible;
+}
+
+/* ---- General sections ---- */
+
+section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.2rem hsla(0, 0%, 48%, 0.513);
+  padding: 2rem;
+  margin: 2rem;
+}
+
+p {
+  color: hsl(0, 0%, 48%);
+  margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.8rem;
+  margin-top: 2rem;
+  line-height: 2.75rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-weight: 500;
+  color: hsl(176, 50%, 47%);
+}
+
+/* ---- Buttons ---- */
+.backProjectButton {
+  background-color: hsl(176, 50%, 47%);
+  border: none;
+  width: 22rem;
+  height: 5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.backProjectButton:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+.bookmark {
+  background-image: url(../images/icon-bookmark.svg);
+  background-position: center;
+  background-color: black;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bookmark:hover {
+  background-image: url(../images/icon-bookmark-hover.svg);
+}
+
+.bookmarkChecked {
+  background-image: url(../images/icon-bookmark-checked.svg);
+}
+/* ---- Sections ---- */
+
+/* -- Title section -- */
+#title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+#logo {
+  width: 56px;
+  height: 56px;
+  background-image: url(/images/logo-mastercraft.svg);
+  position: absolute;
+  top: 24rem;
+  z-index: 2;
+}
+.wrapper {
+  margin: 1.5rem 0;
+}
+
+h1 + p {
+  margin-top: 3rem;
+}
+
+/* -- Stats section -- */
+
+#stats {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.stats h2 + p {
+  padding: 1.5rem 0 0 0;
+  margin: 0%;
+}
+
+.lineTop {
+  border-top: 1px solid hsl(0, 0%, 80%);
+  padding-top: 3rem;
+}
+.lineBot {
+  border-bottom: 1px solid hsl(0, 0%, 80%);
+  padding-bottom: 3rem;
+}
+
+.contain {
+  margin: 3rem 0;
+}
+
+.progressBarContainer {
+  background-color: hsl(0, 0%, 90%);
+  height: 1.5rem;
+  width: 100%;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.progressBarFill {
+  background-color: hsl(176, 50%, 47%);
+  height: 1.5rem;
+  width: 70%;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 2rem;
+}
+
+/* About the project */
+
+#about {
+  padding: 3rem 3rem;
+  line-height: 2.5rem;
+}
+
+.aboutP {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  border: 1px solid rgba(153, 153, 153, 0.507);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.left {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.left p {
+  padding-left: 1rem;
+}
+
+.disabledButton {
+  background-color: rgb(204, 204, 204);
+}
+.disabledButton:hover {
+  background-color: rgb(204, 204, 204);
+}
+.disabledCard {
+  background-color: rgba(243, 243, 243, 0.137);
+}
+.disabledCard h4 {
+  color: rgba(0, 0, 0, 0.431);
+}
+.disabledCard h2 {
+  color: rgba(0, 0, 0, 0.431);
+}
+.disabledCard h5 {
+  color: hsla(176, 50%, 47%, 0.568);
+}
+.disabledCard p {
+  color: hsla(0, 0%, 48%, 0.287);
+}
+
+/* Pledging section */
+
+span {
+  font-weight: 700;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+  color: black;
+}
+
+.popUp {
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.popUpNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  background-image: url(/images/icon-close-modal.svg);
+  width: 15px;
+  height: 15px;
+}
+.popIntro {
+  padding: 2rem 0;
+}
+
+input {
+  border-radius: 25px;
+  border: 1px solid rgb(129, 129, 129);
+  text-align: center;
+  width: 10rem;
+  padding: 15px 0;
+  color: black;
+  font-weight: 700;
+}
+
+.continue {
+  cursor: pointer;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 25px;
+  background-color: hsl(176, 50%, 47%);
+}
+.continue:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+.dollarSign {
+  position: relative;
+  background-image: url(/images/iconmonstr-coin-2.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  bottom: 35px;
+  left: 10px;
+}
+
+.pledge {
+  border-top: 1px solid rgba(153, 153, 153, 0.507);
+  padding-top: 3rem;
+  visibility: hidden;
+  position: absolute;
+}
+
+.pledgeCard {
+  padding-bottom: 0;
+}
+
+.pledgeCard p {
+  padding-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+}
+
+.container > input {
+  width: 20px;
+  margin-right: 20px;
+}
+
+/* Pledge cards active states  */
+
+.pledgeCardActive {
+  outline: 2px solid hsl(176, 50%, 47%);
+}
+
+.pledgeVisibility {
+  visibility: visible;
+  position: static;
+}
+
+/* successful pledge  */
+
+.ok {
+  background-image: url(/images/icon-check.svg);
+  width: 64px;
+  height: 64px;
+}
+
+.successPledge h3 {
+  padding-top: 1rem;
+}
+
+.done {
+  background-color: hsl(176, 50%, 47%);
+  border: none;
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.done:hover {
+  background-color: hsl(176, 72%, 28%);
+}
