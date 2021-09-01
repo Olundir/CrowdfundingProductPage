@@ -38,25 +38,27 @@ const pledgeCard = document.querySelectorAll(".pledgeCard");
 const pledge = document.querySelectorAll(".pledge");
 const radio = document.querySelectorAll(".radioInput");
 
-popUp.addEventListener("click", () => {
+popUp.addEventListener("click", checkForRadio);
+function checkForRadio() {
   for (let i = 0; i < pledgeCard.length - 1; i++) {
     if (radio[i].checked === false) {
       pledgeCard[i].classList.remove("pledgeCardActive");
       pledge[i].classList.remove("pledgeVisibility");
     }
   }
-});
+}
 
 const exit = document.querySelector(".close");
 exit.addEventListener("click", () => {
   exitModal();
-  for (rad of radio) rad.checked = false;
+  //   for (rad of radio) rad.checked = false;
 });
 
 function exitModal() {
   popUp.classList.remove("visibilityToggle");
   popUpGreyOut.classList.remove("visibilityToggle");
   popUpGreyOut.style.height = `2700px`;
+  for (rad of radio) rad.checked = false;
 }
 
 const backProjectButton = document.querySelectorAll(".backProjectButton");
@@ -85,17 +87,17 @@ document.addEventListener(`scroll`, () => {
 
 const done = document.querySelector(".done");
 
-done.addEventListener("click", () => {
+function exitSuccessPledge() {
   successPledge.classList.remove("visibilityToggle");
   popUpGreyOut.classList.remove("visibilityToggle");
-});
+}
+
+done.addEventListener("click", exitSuccessPledge);
 
 for (let i = 0; i < pledgeCard.length - 1; i++) {
   pledgeCard[i].addEventListener("click", (e) => {
-    console.log(e.target);
     if (e.target.innerText === "Continue") {
       exitModal();
-      for (rad of radio) rad.checked = false;
       successPledge.classList.add("visibilityToggle");
       popUpGreyOut.classList.add("visibilityToggle");
     } else {
@@ -105,3 +107,12 @@ for (let i = 0; i < pledgeCard.length - 1; i++) {
     }
   });
 }
+
+document.onkeydown = (e) => {
+  if (e.key == "Escape") {
+    // for (rad of radio) rad.checked = false;
+    exitModal();
+    exitSuccessPledge();
+    checkForRadio();
+  }
+};
